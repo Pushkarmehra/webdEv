@@ -1,0 +1,90 @@
+.logo[data-v-b3dac971] {
+    --amountX: 50%;
+    --amountY: 10%;
+    --speed: .8s;
+    animation: flicker-b3dac971 .4s infinite
+}
+
+.txt[data-v-b3dac971] {
+    text-shadow: rgba(0 0 64px #ffffff)
+}
+
+.l[data-v-b3dac971] {
+    animation: moveLeft-b3dac971 var(--speed) forwards ease;
+    transform: translate(calc(var(--amountX)*-1),calc(var(--amountY)*-1))
+}
+
+.r[data-v-b3dac971] {
+    animation: moveRight-b3dac971 var(--speed) forwards ease;
+    transform: translate(var(--amountX),var(--amountY))
+}
+
+@keyframes moveLeft-b3dac971 {
+    to {
+        transform: translate(0)
+    }
+}
+
+@keyframes moveRight-b3dac971 {
+    to {
+        transform: translate(0)
+    }
+}
+
+@keyframes flicker-b3dac971 {
+    0% {
+        opacity: .1
+    }
+
+    2% {
+        opacity: .3
+    }
+
+    4% {
+        opacity: .7
+    }
+
+    19% {
+        opacity: .8
+    }
+
+    21% {
+        opacity: .2
+    }
+
+    23% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: .7
+    }
+
+    83% {
+        opacity: .6
+    }
+
+    87% {
+        opacity: 1
+    }
+}
+
+html.lenis,html.lenis body {
+    height: auto
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto!important
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none
+}
